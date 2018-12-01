@@ -1,5 +1,6 @@
 package py.com.prestosoftware.facepet;
 
+import android.content.Intent;
 import android.os.Bundle;
 import android.support.annotation.NonNull;
 import android.support.design.widget.BottomNavigationView;
@@ -11,6 +12,7 @@ import android.widget.TextView;
 import butterknife.BindView;
 import butterknife.ButterKnife;
 import butterknife.OnClick;
+import py.com.prestosoftware.facepet.ui.users.login.LoginActivity;
 
 
 public class MainActivity extends AppCompatActivity {
@@ -52,6 +54,10 @@ public class MainActivity extends AppCompatActivity {
         super.onDestroy();
 
         Log.d(TAG,"onDestroy");
+    }
+    @OnClick(R.id.btnirLogin)
+    public void goToLoginActivity() {
+        startActivity(new Intent(this,LoginActivity.class));
     }
 
     // Metodos locales   -
